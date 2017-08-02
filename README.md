@@ -34,7 +34,7 @@ I found that the steps described in https://www.tensorflow.org/install/install\_
 * Download tensorflow\_gpu‑1.1.0‑cp36‑cp36m‑win\_amd64.whl from this page: http://www.lfd.uci.edu/~gohlke/pythonlibs/ (this page is extremely useful for Windows users codingin Python)
 * Run a command prompt to use pip.exe on that .whl file
 ```shell
-pip install tensorflow\_gpu‑1.1.0‑cp36‑cp36m‑win\_amd64.whl
+pip install tensorflow_gpu‑1.1.0‑cp36‑cp36m‑win_amd64.whl
 ```
 
 Tensorflow should now be installed on your computer.
