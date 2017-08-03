@@ -4,6 +4,8 @@ Tutorials and sources to reproduce results obtained during my 2017 summer intern
 
 ## Installation
 
+__NB: if you are at uOttawa Department of Geography, all the required libraries are installed in the python evironment located at D:\Amaury\Anaconda3\__ 
+
 You will need a Python 3 environment with all standard libraries installed. I personally used Anaconda3, and it was my only Python envronment on the machine. CAUTION: When using pip, make sure it is using the pip.exe of the correct Python environment.
 
 ### GIST vectors
@@ -57,6 +59,49 @@ pip install h5py
 ```
 
 
-## Usage
+## Usage example: 
+## Main results: Convolutional Neural Networks (CNN)
 
-Work in progress
+__Most of the model training and classification was done on a server using a NVIDIA Tesla K80 GPUs. I advise you to use powerful GPUs with more than 10 GB of memory, or else the processings could take a very, very long time__
+
+__If you are at the Geography Department of uOttawa, the set of images is already present on the server in the D:\Amaury\Desktop folder, under the ottawa\_image\_db directory, so do not bother spending several days downloading the StreetView imagery of Ottawa! (yes, this Desktop folder is a bit messy...)__
+
+__Scripts to use: gentriNetConvServer2.py, gentriMap\_allImages.py, to\_positives.py__
+
+Get a .txt file filled with lines like this:
+```
+path/to/img1.jpg path/to/img2.jpg 0
+path/to/img2.jpg path/to/img3.jpg 1
+```
+with 0 meaning no gentrification between the first and second image and 1 meaning the opposite
+
+Rename this file as retrain.txt and place it in the same directory as __gentriNetConvServer2.py__
+You should edit the gentriNetConvServer2.py lines corresponding to learning rates, number of iterations etc. according to your needs.
+__Make sure that the last lines are uncommented so the model is saved after you train it for several days...__
+### In a more general way, you should read the script files and commentary to understand the way they work before using them
+
+To run the file on the Geography Depatment server, open a command prompt, and type this series of commands:
+
+```shell
+D:
+
+cd D:\Amaury\Desktop\
+
+D:\Amaury\Anaconda3\python.exe
+
+[Python shell launches]
+
+>>> exec(open("./gentriNetConvServer2.py").read())
+```
+
+Processing can take up to several days, even on a Tesla K80.
+
+Once the model is saved, you can import it to classify your large set of images using __gentriMap\_allImages.py__. You first have to edit the lines to make sure the right model is imported. Use this occasion to read the whole script and make sure it does what you think it does. To run it, if you are in the same command prompt window just type exec(open("./gentriMap\_allImages.py").read())
+
+__CAUTION: you might have a Out Of Memory error (or similar one) if you do too much operations without closing the command prompt window. Workarounds are: close the current cmd window and open another one OR in the "with tf.device('/gpu:x'):" line of the script you want to run, modify the gpu index (0, 1, 2 or 3 instead of x)__
+
+Processing can take up to 30 hours, even on a Tesla K80.
+
+The output of the classification is a sat of 64 files corresponding to the classification results. In order to extract only the positive ones (which are the ones we're interested in) and fuse them in a single file, use the __to\_positives.py__ script. The functions you should use are __res2pos\_multi()__ and __multipos2singlepos()__. Unfortunately, I hardcoded the paths I used on my computer so if you're using another one, maybe you'll have to change them.
+
+The resulting file ("positives\_0-63.txt" by default) is a concatenation of all the positives detected by the model. You can load it in any GIS (I used QGIS) with the fist field as Y coordinates and second field as X coordinates in WGS84.
