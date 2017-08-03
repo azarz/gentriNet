@@ -4,7 +4,7 @@ Tutorials and sources to reproduce results obtained during my 2017 summer intern
 
 ## Installation
 
-__NB: if you are at uOttawa Department of Geography, all the required libraries are installed in the python evironment located at D:\Amaury\Anaconda3\__ 
+__NB: if you are at uOttawa Department of Geography, all the required libraries are installed in the python evironment located at D:\Amaury\Anaconda3\\__ 
 
 You will need a Python 3 environment with all standard libraries installed. I personally used Anaconda3, and it was my only Python envronment on the machine. CAUTION: When using pip, make sure it is using the pip.exe of the correct Python environment.
 
