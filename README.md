@@ -1,4 +1,4 @@
- # gentriNet
+# gentriNet
 Tutorials and sources to reproduce results obtained during my 2017 summer internship at uOttawa
 (WIP)
 
@@ -8,7 +8,7 @@ __NB: if you are at uOttawa Department of Geography, all the required libraries 
 
 You will need a Python 3 environment with all standard libraries installed. I personally used Anaconda3, and it was my only Python envronment on the machine. CAUTION: When using pip, make sure it is using the pip.exe of the correct Python environment.
 
-#### Determining where your pip.exe is for Anaconda
+#### How to determine where your pip.exe is for Anaconda
 Open a command prompt in windows by typing "cmd" in the search bar.  In the command prompt type:
 
 ```shell 
