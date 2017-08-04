@@ -19,8 +19,7 @@ from osgeo import ogr
 
 import random
 
-# Please use your own Google API key and not the default one
-API_KEY = "AIzaSyBIgKy3bpsMnaKGuUexZPP9I9C7xjA8jX0"
+API_KEY = "<YourAPIkey>"
 
 #------------------------------------------------------------------------------
 def sift(*args, **kwargs):
