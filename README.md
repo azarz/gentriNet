@@ -25,11 +25,15 @@ and then
 ```shell
 dir
 ```
-which returns within the resulting list of files and folders you would see a probram called ```pip.exe```:
+which returns within the resulting list of files and folders you would see a program called ```pip.exe```:
 
 ![screenshot](pip2.png)
 
-So in this folder, if you wanted to install a package for python called 
+So in this folder, *IF* you wanted to install a package for python called ```testpackage``` you would type:
+
+```python
+pip install testpackage
+```
 
 ### GIST vectors
 
