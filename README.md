@@ -61,7 +61,8 @@ I found that the steps described in https://www.tensorflow.org/install/install\_
   * Also make sure that the /bin directory installed along with CUDA is added to the PATH environment variable
 * Download cuDNN v5.1 AND cuDNN v6.0 (https://developer.nvidia.com/rdp/cudnn-download) and copy all files from both downloads in the /bin folder of CUDA
 * Download tensorflow\_gpu‑1.1.0‑cp36‑cp36m‑win\_amd64.whl from this page: http://www.lfd.uci.edu/~gohlke/pythonlibs/ (this page is extremely useful for Windows users codingin Python)
-* Run a command prompt to use pip.exe on that .whl file
+* Ensure that you place the downloaded tensorflow_gpu‑1.1.0‑cp36‑cp36m‑win_amd64.whl in the ```Scripts\``` folder of the anaconda installation.  To determine where to put this file see above *How to determine where your pip.exe is for Anaconda*.
+* Run a command prompt to use pip.exe on that .whl file.  
 ```shell
 pip install tensorflow_gpu‑1.1.0‑cp36‑cp36m‑win_amd64.whl
 ```
