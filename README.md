@@ -15,12 +15,17 @@ Open a command prompt in windows by typing "cmd" in the search bar.  In the comm
 where conda
 ``` 
 
-which on my computer returns ```C:\ProgramData\Anaconda3\Scripts\conda.exe```.  As such, in a command prompt I would type 
+which on my computer returns ```C:\ProgramData\Anaconda3\Scripts\conda.exe```.  As such, in the open command prompt I would type 
 
 ```shell
 cd C:\ProgramData\Anaconda3\Scripts
 ``` 
-and then ```dir``` and within the resulting list of files and folders you would see a probram called ```pip.exe```.  So in this folder, if you wanted to install a package for python called 
+and then 
+
+```shell
+dir
+```
+which returns within the resulting list of files and folders you would see a probram called ```pip.exe```.  So in this folder, if you wanted to install a package for python called 
 
 ### GIST vectors
 
