@@ -8,6 +8,10 @@ __NB: if you are at uOttawa Department of Geography, all the required libraries 
 
 You will need a Python 3 environment with all standard libraries installed. I personally used Anaconda3, and it was my only Python envronment on the machine. CAUTION: When using pip, make sure it is using the pip.exe of the correct Python environment.
 
+#### Determining where your pip.exe is for Anaconda
+Open a command prompt in windows by typing "cmd" in the search bar.  In the command prompt type:
+```where conda```
+
 ### GIST vectors
 
 To process GIST vectors the way I did in the Python scripts you will find in this repository, you will need to install this implementation: https://github.com/azarz/lear-gist-python. The installation procedure is described in the README.md.
