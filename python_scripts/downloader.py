@@ -1,33 +1,19 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu May 25 09:11:23 2017
-
-@author: amaury
+This is the actual script I used to download the ottawa_image_db
 """
 
 import numpy as np
 from scipy import misc
-import os
 
 import gist
 import streetview
 
 from osgeo import ogr
-from scipy.spatial.distance import cdist
 
 import random
 
-import csv
-import glob
-
-import trueskill
-
-from sklearn import svm
-from sklearn.model_selection import train_test_split
-
-import svm_tools
-
-API_KEY = "AIzaSyBIgKy3bpsMnaKGuUexZPP9I9C7xjA8jX0"
+API_KEY = "<yourAPIkey>"
 
 #------------------------------------------------------------------------------
 
