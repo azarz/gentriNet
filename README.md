@@ -101,7 +101,7 @@ Get a .txt file filled with lines like this:
 path/to/img1.jpg path/to/img2.jpg 0
 path/to/img2.jpg path/to/img3.jpg 1
 ```
-with 0 meaning no gentrification between the first and second image and 1 meaning the opposite
+with 0 meaning no gentrification between the first and second image and 1 meaning the opposite.
 
 Rename this file as retrain.txt and place it in the same directory as __gentriNetConvServer2.py__
 You should edit the gentriNetConvServer2.py lines corresponding to learning rates, number of iterations etc. according to your needs.
@@ -130,6 +130,6 @@ __CAUTION: you might have a Out Of Memory error (or similar one) if you do too m
 
 Processing can take up to 30 hours, even on a Tesla K80.
 
-The output of the classification is a sat of 64 files corresponding to the classification results. In order to extract only the positive ones (which are the ones we're interested in) and fuse them in a single file, use the __to\_positives.py__ script. The functions you should use are __res2pos\_multi()__ and __multipos2singlepos()__. Unfortunately, I hardcoded the paths I used on my computer so if you're using another one, maybe you'll have to change them.
+The output of the classification is a set of 64 files corresponding to the classification results. In order to extract only the positive ones (which are the ones we're interested in) and fuse them in a single file, use the __to\_positives.py__ script. The functions you should use are __res2pos\_multi()__ and __multipos2singlepos()__. Unfortunately, I hardcoded the paths I used on my computer so if you're using another one, maybe you'll have to change them.
 
 The resulting file ("positives\_0-63.txt" by default) is a concatenation of all the positives detected by the model. You can load it in any GIS (I used QGIS) with the fist field as Y coordinates and second field as X coordinates in WGS84.
