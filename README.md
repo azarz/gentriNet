@@ -25,7 +25,11 @@ and then
 ```shell
 dir
 ```
-which returns within the resulting list of files and folders you would see a probram called ```pip.exe```.  So in this folder, if you wanted to install a package for python called 
+which returns within the resulting list of files and folders you would see a probram called ```pip.exe```:
+
+![screenshot](pip.png)
+
+So in this folder, if you wanted to install a package for python called 
 
 ### GIST vectors
 
