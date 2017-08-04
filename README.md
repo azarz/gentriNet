@@ -27,7 +27,7 @@ dir
 ```
 which returns within the resulting list of files and folders you would see a probram called ```pip.exe```:
 
-![screenshot](pip.png)
+![screenshot](pip2.png)
 
 So in this folder, if you wanted to install a package for python called 
 
