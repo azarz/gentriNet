@@ -10,7 +10,9 @@ You will need a Python 3 environment with all standard libraries installed. I pe
 
 #### Determining where your pip.exe is for Anaconda
 Open a command prompt in windows by typing "cmd" in the search bar.  In the command prompt type:
-```shell where conda``` which on my computer returns ```C:\ProgramData\Anaconda3\Scripts\conda.exe```.  As such, in a command prompt I would type ```cd C:\ProgramData\Anaconda3\Scripts``` and then ```dir``` and within the resulting list of files and folders you would see a probram called ```pip.exe```.  So in this folder, if you wanted to install a package for python called 
+```shell 
+where conda
+``` which on my computer returns ```C:\ProgramData\Anaconda3\Scripts\conda.exe```.  As such, in a command prompt I would type ```cd C:\ProgramData\Anaconda3\Scripts``` and then ```dir``` and within the resulting list of files and folders you would see a probram called ```pip.exe```.  So in this folder, if you wanted to install a package for python called 
 
 ### GIST vectors
 
