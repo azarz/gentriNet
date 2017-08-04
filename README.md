@@ -71,7 +71,7 @@ Tensorflow should now be installed on your computer.
 
 #### Keras
 
-Now that tensorflow is installed, you can install Keras uning pip and PyPi
+Now that tensorflow is installed (ensure you are in a command prompt and within the ```Scripts\``` folder of the anaconda installation- to determine where to put this file see above *How to determine where your pip.exe is for Anaconda*), you can install Keras uning pip and PyPi
 ```shell
 pip install keras
 ```
