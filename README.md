@@ -4,7 +4,7 @@ Tutorials and sources to reproduce results obtained during my 2017 summer intern
 
 ## Installation
 
-__NB: if you are at uOttawa Department of Geography, all the required libraries are installed in the python evironment located at D:\Amaury\Anaconda3\\__ 
+__NB: if you are at uOttawa Department of Geography, Environment and Geomatics, all the required libraries are installed in the python evironment located at D:\Amaury\Anaconda3\\__ 
 
 You will need a Python 3 environment with all standard libraries installed. I personally used Anaconda3, and it was my only Python envronment on the machine. CAUTION: When using pip, make sure it is using the pip.exe of the correct Python environment.
 
@@ -92,7 +92,7 @@ pip install h5py
 
 __Most of the model training and classification was done on a server using a NVIDIA Tesla K80 GPUs. I advise you to use powerful GPUs with more than 10 GB of memory, or else the processings could take a very, very long time__
 
-__If you are at the Geography Department of uOttawa, the set of images is already present on the server in the D:\Amaury\Desktop folder, under the ottawa\_image\_db directory, so do not bother spending several days downloading the StreetView imagery of Ottawa! (yes, this Desktop folder is a bit messy...)__
+__If you are at the Department of Geography, Environment and Geomatics at uOttawa, the set of images is already present on the server in the D:\Amaury\Desktop folder, under the ottawa\_image\_db directory, so do not bother spending several days downloading the StreetView imagery of Ottawa! (yes, this Desktop folder is a bit messy...)__
 
 __Scripts to use: gentriNetConvServer2.py, gentriMap\_allImages.py, to\_positives.py__
 
