@@ -1,0 +1,46 @@
+body{
+	font-family: Calibri;
+	background-color: #9ACD32;
+	font-size: 1.5em;
+}
+
+body{
+	margin: 0;
+}
+
+img{
+	width: 640px;
+}
+
+#images, #dates{
+	text-align: center;
+}
+
+#title{
+	text-align: center;
+	font-size: 1.7em;
+}
+
+#textes{
+	display: flex;
+	justify-content: center;
+}
+
+#pSubmit{
+  text-align: center;
+	margin: 0;
+	margin-top: 5px;
+}
+
+#submitBtn{
+	height: 50px;
+	width: 25%;
+	font-size: 1.5em;
+	background-color: darkgrey;
+	border-radius: 8px;
+}
+
+#submitBtn:hover{
+    box-shadow: 4px 4px 5px grey;
+	background-color: rgb(100,100,100);
+}
