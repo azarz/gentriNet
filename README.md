@@ -4,13 +4,36 @@ Tutorials and sources to reproduce results obtained during my 2017 summer intern
 
 ## Installation
 
-__NB: if you are at uOttawa Department of Geography, all the required libraries are installed in the python evironment located at D:\Amaury\Anaconda3\\__ 
+__NB: if you are at uOttawa Department of Geography, Environment and Geomatics, all the required libraries are installed in the python evironment located at D:\Amaury\Anaconda3\\__ 
 
 You will need a Python 3 environment with all standard libraries installed. I personally used Anaconda3, and it was my only Python envronment on the machine. CAUTION: When using pip, make sure it is using the pip.exe of the correct Python environment.
 
-#### Determining where your pip.exe is for Anaconda
+#### How to determine where your pip.exe is for Anaconda
 Open a command prompt in windows by typing "cmd" in the search bar.  In the command prompt type:
-```where conda```
+
+```shell 
+where conda
+``` 
+
+which on my computer returns ```C:\ProgramData\Anaconda3\Scripts\conda.exe```.  As such, in the open command prompt I would type 
+
+```shell
+cd C:\ProgramData\Anaconda3\Scripts
+``` 
+and then 
+
+```shell
+dir
+```
+which returns within the resulting list of files and folders you would see a program called ```pip.exe```:
+
+![screenshot](pip2.png)
+
+So in this folder, *IF* you wanted to install a package for python called ```testpackage``` you would type:
+
+```python
+pip install testpackage
+```
 
 ### GIST vectors
 
@@ -38,7 +61,8 @@ I found that the steps described in https://www.tensorflow.org/install/install\_
   * Also make sure that the /bin directory installed along with CUDA is added to the PATH environment variable
 * Download cuDNN v5.1 AND cuDNN v6.0 (https://developer.nvidia.com/rdp/cudnn-download) and copy all files from both downloads in the /bin folder of CUDA
 * Download tensorflow\_gpu‑1.1.0‑cp36‑cp36m‑win\_amd64.whl from this page: http://www.lfd.uci.edu/~gohlke/pythonlibs/ (this page is extremely useful for Windows users codingin Python)
-* Run a command prompt to use pip.exe on that .whl file
+* Ensure that you place the downloaded tensorflow_gpu‑1.1.0‑cp36‑cp36m‑win_amd64.whl in the ```Scripts\``` folder of the anaconda installation.  To determine where to put this file see above *How to determine where your pip.exe is for Anaconda*.
+* Run a command prompt to use pip.exe on that .whl file.  
 ```shell
 pip install tensorflow_gpu‑1.1.0‑cp36‑cp36m‑win_amd64.whl
 ```
@@ -47,7 +71,7 @@ Tensorflow should now be installed on your computer.
 
 #### Keras
 
-Now that tensorflow is installed, you can install Keras uning pip and PyPi
+Now that tensorflow is installed (ensure you are in a command prompt and within the ```Scripts\``` folder of the anaconda installation- to determine where to put this file see above *How to determine where your pip.exe is for Anaconda*), you can install Keras uning pip and PyPi
 ```shell
 pip install keras
 ```
@@ -68,7 +92,7 @@ pip install h5py
 
 __Most of the model training and classification was done on a server using a NVIDIA Tesla K80 GPUs. I advise you to use powerful GPUs with more than 10 GB of memory, or else the processings could take a very, very long time__
 
-__If you are at the Geography Department of uOttawa, the set of images is already present on the server in the D:\Amaury\Desktop folder, under the ottawa\_image\_db directory, so do not bother spending several days downloading the StreetView imagery of Ottawa! (yes, this Desktop folder is a bit messy...)__
+__If you are at the Department of Geography, Environment and Geomatics at uOttawa, the set of images is already present on the server in the D:\Amaury\Desktop folder, under the ottawa\_image\_db directory, so do not bother spending several days downloading the StreetView imagery of Ottawa! (yes, this Desktop folder is a bit messy...)__
 
 __Scripts to use: gentriNetConvServer2.py, gentriMap\_allImages.py, to\_positives.py__
 
@@ -77,7 +101,7 @@ Get a .txt file filled with lines like this:
 path/to/img1.jpg path/to/img2.jpg 0
 path/to/img2.jpg path/to/img3.jpg 1
 ```
-with 0 meaning no gentrification between the first and second image and 1 meaning the opposite
+with 0 meaning no gentrification between the first and second image and 1 meaning the opposite.
 
 Rename this file as retrain.txt and place it in the same directory as __gentriNetConvServer2.py__
 You should edit the gentriNetConvServer2.py lines corresponding to learning rates, number of iterations etc. according to your needs.
@@ -106,6 +130,6 @@ __CAUTION: you might have a Out Of Memory error (or similar one) if you do too m
 
 Processing can take up to 30 hours, even on a Tesla K80.
 
-The output of the classification is a sat of 64 files corresponding to the classification results. In order to extract only the positive ones (which are the ones we're interested in) and fuse them in a single file, use the __to\_positives.py__ script. The functions you should use are __res2pos\_multi()__ and __multipos2singlepos()__. Unfortunately, I hardcoded the paths I used on my computer so if you're using another one, maybe you'll have to change them.
+The output of the classification is a set of 64 files corresponding to the classification results. In order to extract only the positive ones (which are the ones we're interested in) and fuse them in a single file, use the __to\_positives.py__ script. The functions you should use are __res2pos\_multi()__ and __multipos2singlepos()__. Unfortunately, I hardcoded the paths I used on my computer so if you're using another one, maybe you'll have to change them.
 
 The resulting file ("positives\_0-63.txt" by default) is a concatenation of all the positives detected by the model. You can load it in any GIS (I used QGIS) with the fist field as Y coordinates and second field as X coordinates in WGS84.
