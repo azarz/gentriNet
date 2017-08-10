@@ -1,6 +1,6 @@
 # gentriNet
-Tutorials and sources to reproduce results obtained during my 2017 summer internship at uOttawa
-(WIP)
+
+## If you have any question, please open an issue and I'll try to answer as quickly as possible.
 
 ## Installation
 
