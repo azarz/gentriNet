@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-This script (untested) aims to train a convolutional neural network to rate street view imagery
+This script aims to train a convolutional neural network to rate street view imagery
 about how wealthy it looks
 """
 
@@ -217,7 +217,7 @@ with tf.device('/cpu:0'):
                                  epochs=100, validation_data=(X_val, y_val))
     
     # Trying a predicition to calculate the R squared value
-    pred = classification_model.predict([X_test[:, 0], X_test[:, 1]])
+    pred = classification_model.predict(X_test)
     te_acc = compute_accuracy(pred, y_test)
     print(te_acc)
 
