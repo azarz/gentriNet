@@ -10,4 +10,4 @@ __In order to access the interfaces that are already set up, turn on the compute
 ## Architecture of the interfaces
 ![diagram](Explanatory%20diagram.jpg)
 
-I know the style and workflow is not optimal, please improve them if you can and send pull requests.
+I know the style and workflow are not optimal, please improve them if you can and send pull requests.
