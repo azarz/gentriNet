@@ -133,3 +133,5 @@ Processing can take up to 30 hours, even on a Tesla K80.
 The output of the classification is a set of 64 files corresponding to the classification results. In order to extract only the positive ones (which are the ones we're interested in) and fuse them in a single file, use the __to\_positives.py__ script. The functions you should use are __res2pos\_multi()__ and __multipos2singlepos()__. Unfortunately, I hardcoded the paths I used on my computer so if you're using another one, maybe you'll have to change them.
 
 The resulting file ("positives\_0-63.txt" by default) is a concatenation of all the positives detected by the model. You can load it in any GIS (I used QGIS) with the fist field as Y coordinates and second field as X coordinates in WGS84.
+
+I personnaly had way to many false positives on my first go, these are the steps I followed to try and overcome this problem: https://github.com/azarz/gentriNet/blob/master/Iterative_models.md
