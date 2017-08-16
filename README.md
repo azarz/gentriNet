@@ -46,6 +46,10 @@ The Google API usually doesn't need any installation, but since we want historic
 import streetview
 ```
 
+### GDAL/OGR
+Install it using the wheel from
+http://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal
+
 ### Keras and tensorflow
 
 To install most modules, is use pip.exe, be it through PyPi or through downloaded files. It is the case with Keras, the high-level deep-learning library I used to manipulate neural networks. https://github.com/fchollet/keras
