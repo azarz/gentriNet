@@ -8,6 +8,6 @@ Use visualization.py
 
 To know which layer you want to visualize, you can load the json file corresponding to your model into http://jsonviewer.stack.hu/
 
-### 64 most discriminant filters
+### 64 most discriminant filters (last convolutional layer)
 
 ![filters](stitched_filters_8x8_2.png)
