@@ -1,6 +1,6 @@
 # gentriNet
 
-## If you have any question, please open an issue and I'll try to answer as quickly as possible.
+## If you have any question, please [open an issue](https://github.com/azarz/gentriNet/issues) and I'll try to answer as quickly as possible.
 
 ## Installation
 
@@ -135,3 +135,8 @@ The output of the classification is a set of 64 files corresponding to the class
 The resulting file ("positives\_0-63.txt" by default) is a concatenation of all the positives detected by the model. You can load it in any GIS (I used QGIS) with the fist field as Y coordinates and second field as X coordinates in WGS84.
 
 I personnaly had way to many false positives on my first go, these are the steps I followed to try and overcome this problem: https://github.com/azarz/gentriNet/blob/master/Iterative_models.md
+
+
+
+## Suggestions to improve the results
+https://github.com/azarz/gentriNet/blob/master/suggestions.md
