@@ -1,6 +1,9 @@
 # Python scripts
 You will find in tis directory all the Python scripts I used during my internship
 
+### CNN architecture used
+![architecture](architecture.jpg)
+
 
 ## Visualize filters
 
