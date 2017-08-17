@@ -1,3 +1,3 @@
 # Report (french)
 
-Document in which I have writtent the summary of my internship at uOttawa. WORK IN PROGRESS
+Document in which I have written the summary of my internship at uOttawa.
