@@ -15,7 +15,7 @@ from osgeo import ogr
 
 import os
 
-API_KEY = "AIzaSyB92-gTxs8Wi-1JupjJP4nPb5-VTOG0zLY"
+API_KEY = "YOURAPIKEY"
 
 #------------------------------------------------------------------------------
 
