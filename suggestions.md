@@ -1,6 +1,6 @@
 # Suggestions to improve the results
 
-+ Count the new developments as flase positives
++ Count the new developments as false positives
 
 + Work only on the historical town
 
