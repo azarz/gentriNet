@@ -41,7 +41,19 @@ To process GIST vectors the way I did in the Python scripts you will find in thi
 
 ### Google StreetView
 
-The Google API usually doesn't need any installation, but since we want historical imagery, we use this module: https://github.com/robolyst/streetview. To use it, simply place the folder containing the \_\_init\_\_.py in the same directory as your script, and import it using the line 
+The Google API usually doesn't need any installation, but since we want historical imagery, we use this module: https://github.com/robolyst/streetview. 
+
+In order to make it work properly in our case, there is a small change to apply to the __init.py__ file.
+Change line 56
+```python
+def panoids(lat, lon, closest=False, disp=False):
+```
+to
+```python
+def panoids(lat, lon, closest=True, disp=False):
+```
+
+To use it, simply place the folder containing the \_\_init\_\_.py in the same directory as your script, and import it using the line 
 ```python
 import streetview
 ```
