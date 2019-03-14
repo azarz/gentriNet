@@ -1,5 +1,7 @@
 # gentriNet
 
+## Good news! The ressearch gentriNet was a part of got published! https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0212814
+
 ## If you have any question, please [open an issue](https://github.com/azarz/gentriNet/issues) and I'll try to answer as quickly as possible.
 
 ## Installation
